@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		922F59E216072DDF0088F2CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922F59E116072DDF0088F2CA /* Foundation.framework */; };
+		922F59E716072DDF0088F2CA /* EyeEmAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 922F59E616072DDF0088F2CA /* EyeEmAPI.h */; };
+		922F59E916072DDF0088F2CA /* EyeEM-iOS-SDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 922F59E816072DDF0088F2CA /* EyeEM-iOS-SDK.m */; };
+		922F59F416073DD40088F2CA /* EERequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 922F59F316073DD40088F2CA /* EERequest.m */; };
+		9263F291160B1C250018A4DB /* EEQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 9263F290160B1C250018A4DB /* EEQuery.m */; };
+		9263F29D160B28A10018A4DB /* EENews.m in Sources */ = {isa = PBXBuildFile; fileRef = 9263F29C160B28A10018A4DB /* EENews.m */; };
+		929194191608D8F100625402 /* EEPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 929194181608D8F100625402 /* EEPhoto.m */; };
+		9291941E1608D92900625402 /* EEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9291941D1608D92900625402 /* EEUser.m */; };
+		929194211608D94300625402 /* EEAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 929194201608D94300625402 /* EEAlbum.m */; };
+		929194241609B9C400625402 /* EEComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 929194231609B9C400625402 /* EEComment.m */; };
+		9291942A1609C5B600625402 /* EELocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 929194291609C5B600625402 /* EELocation.m */; };
+		9291942C1609C71E00625402 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9291942B1609C71E00625402 /* CoreLocation.framework */; };
+		92919448160A157600625402 /* EEOAuthUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 92919447160A157500625402 /* EEOAuthUser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		922F59DC16072DDF0088F2CA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				922F59E716072DDF0088F2CA /* EyeEmAPI.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		922F59DE16072DDF0088F2CA /* libEEAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEEAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		922F59E116072DDF0088F2CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		922F59E516072DDF0088F2CA /* EEAPI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EEAPI-Prefix.pch"; sourceTree = "<group>"; };
+		922F59E616072DDF0088F2CA /* EyeEmAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeEmAPI.h; sourceTree = "<group>"; };
+		922F59E816072DDF0088F2CA /* EyeEM-iOS-SDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "EyeEM-iOS-SDK.m"; path = "../EyeEM-iOS-SDK.m"; sourceTree = "<group>"; };
+		922F59F216073DD40088F2CA /* EERequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EERequest.h; sourceTree = "<group>"; };
+		922F59F316073DD40088F2CA /* EERequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EERequest.m; sourceTree = "<group>"; };
+		9263F28F160B1C250018A4DB /* EEQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEQuery.h; sourceTree = "<group>"; };
+		9263F290160B1C250018A4DB /* EEQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEQuery.m; sourceTree = "<group>"; };
+		9263F29B160B28A10018A4DB /* EENews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EENews.h; sourceTree = "<group>"; };
+		9263F29C160B28A10018A4DB /* EENews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EENews.m; sourceTree = "<group>"; };
+		929194171608D8F100625402 /* EEPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEPhoto.h; sourceTree = "<group>"; };
+		929194181608D8F100625402 /* EEPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEPhoto.m; sourceTree = "<group>"; };
+		9291941C1608D92900625402 /* EEUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEUser.h; sourceTree = "<group>"; };
+		9291941D1608D92900625402 /* EEUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEUser.m; sourceTree = "<group>"; };
+		9291941F1608D94300625402 /* EEAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEAlbum.h; sourceTree = "<group>"; };
+		929194201608D94300625402 /* EEAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEAlbum.m; sourceTree = "<group>"; };
+		929194221609B9C300625402 /* EEComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEComment.h; sourceTree = "<group>"; };
+		929194231609B9C400625402 /* EEComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEComment.m; sourceTree = "<group>"; };
+		929194281609C5B600625402 /* EELocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EELocation.h; sourceTree = "<group>"; };
+		929194291609C5B600625402 /* EELocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EELocation.m; sourceTree = "<group>"; };
+		9291942B1609C71E00625402 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		92919446160A157400625402 /* EEOAuthUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEOAuthUser.h; sourceTree = "<group>"; };
+		92919447160A157500625402 /* EEOAuthUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEOAuthUser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		922F59DB16072DDF0088F2CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9291942C1609C71E00625402 /* CoreLocation.framework in Frameworks */,
+				922F59E216072DDF0088F2CA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		922F59D316072DDF0088F2CA = {
+			isa = PBXGroup;
+			children = (
+				922F59E316072DDF0088F2CA /* EEAPI */,
+				922F59E016072DDF0088F2CA /* Frameworks */,
+				922F59DF16072DDF0088F2CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		922F59DF16072DDF0088F2CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				922F59DE16072DDF0088F2CA /* libEEAPI.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		922F59E016072DDF0088F2CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9291942B1609C71E00625402 /* CoreLocation.framework */,
+				922F59E116072DDF0088F2CA /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		922F59E316072DDF0088F2CA /* EEAPI */ = {
+			isa = PBXGroup;
+			children = (
+				9291941B1608D90100625402 /* Models */,
+				922F59E616072DDF0088F2CA /* EyeEmAPI.h */,
+				922F59E816072DDF0088F2CA /* EyeEM-iOS-SDK.m */,
+				922F59F216073DD40088F2CA /* EERequest.h */,
+				922F59F316073DD40088F2CA /* EERequest.m */,
+				9263F28F160B1C250018A4DB /* EEQuery.h */,
+				9263F290160B1C250018A4DB /* EEQuery.m */,
+				922F59E416072DDF0088F2CA /* Supporting Files */,
+			);
+			path = EEAPI;
+			sourceTree = "<group>";
+		};
+		922F59E416072DDF0088F2CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				922F59E516072DDF0088F2CA /* EEAPI-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9291941B1608D90100625402 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				929194221609B9C300625402 /* EEComment.h */,
+				929194231609B9C400625402 /* EEComment.m */,
+				9291941F1608D94300625402 /* EEAlbum.h */,
+				929194201608D94300625402 /* EEAlbum.m */,
+				9291941C1608D92900625402 /* EEUser.h */,
+				9291941D1608D92900625402 /* EEUser.m */,
+				92919446160A157400625402 /* EEOAuthUser.h */,
+				92919447160A157500625402 /* EEOAuthUser.m */,
+				929194281609C5B600625402 /* EELocation.h */,
+				929194291609C5B600625402 /* EELocation.m */,
+				929194171608D8F100625402 /* EEPhoto.h */,
+				929194181608D8F100625402 /* EEPhoto.m */,
+				9263F29B160B28A10018A4DB /* EENews.h */,
+				9263F29C160B28A10018A4DB /* EENews.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		922F59DD16072DDF0088F2CA /* EEAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922F59EC16072DDF0088F2CA /* Build configuration list for PBXNativeTarget "EEAPI" */;
+			buildPhases = (
+				922F59DA16072DDF0088F2CA /* Sources */,
+				922F59DB16072DDF0088F2CA /* Frameworks */,
+				922F59DC16072DDF0088F2CA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EEAPI;
+			productName = EEAPI;
+			productReference = 922F59DE16072DDF0088F2CA /* libEEAPI.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		922F59D516072DDF0088F2CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = EyeEm;
+			};
+			buildConfigurationList = 922F59D816072DDF0088F2CA /* Build configuration list for PBXProject "EEAPI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 922F59D316072DDF0088F2CA;
+			productRefGroup = 922F59DF16072DDF0088F2CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				922F59DD16072DDF0088F2CA /* EEAPI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		922F59DA16072DDF0088F2CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922F59E916072DDF0088F2CA /* EyeEM-iOS-SDK.m in Sources */,
+				922F59F416073DD40088F2CA /* EERequest.m in Sources */,
+				929194191608D8F100625402 /* EEPhoto.m in Sources */,
+				9291941E1608D92900625402 /* EEUser.m in Sources */,
+				929194211608D94300625402 /* EEAlbum.m in Sources */,
+				929194241609B9C400625402 /* EEComment.m in Sources */,
+				9291942A1609C5B600625402 /* EELocation.m in Sources */,
+				92919448160A157600625402 /* EEOAuthUser.m in Sources */,
+				9263F291160B1C250018A4DB /* EEQuery.m in Sources */,
+				9263F29D160B28A10018A4DB /* EENews.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		922F59EA16072DDF0088F2CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		922F59EB16072DDF0088F2CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		922F59ED16072DDF0088F2CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/EEAPI.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EEAPI/EEAPI-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		922F59EE16072DDF0088F2CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/EEAPI.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EEAPI/EEAPI-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		922F59D816072DDF0088F2CA /* Build configuration list for PBXProject "EEAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922F59EA16072DDF0088F2CA /* Debug */,
+				922F59EB16072DDF0088F2CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		922F59EC16072DDF0088F2CA /* Build configuration list for PBXNativeTarget "EEAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922F59ED16072DDF0088F2CA /* Debug */,
+				922F59EE16072DDF0088F2CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 922F59D516072DDF0088F2CA /* Project object */;
+}
