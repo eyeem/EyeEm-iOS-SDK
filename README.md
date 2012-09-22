@@ -158,10 +158,15 @@ If you want get an other photo than the standard 640*480 pixel from the photoUrl
 -(NSURL*) urlFromPathForPhoto:(NSURL*)urlPath withPixelHeight:(NSInteger)imageHeight;
 ```
 
+  
+##Contact
+***
+
+For feedback, questions, complaints and props, you can get in touch with us at [api@eyeem.com](mailto:api@eyeem.com) or [@eyeemapi](http://twitter.com/eyeemapi) on Twitter.
+
 
 ##Credits
 ***
-
 
 
 Thanks to the [Facebook](https://github.com/facebook/facebook-ios-sdk),[500px](https://github.com/500px/500px-iOS-api) and [crino](https://github.com/crino).
