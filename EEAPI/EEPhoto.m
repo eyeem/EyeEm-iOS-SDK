@@ -17,7 +17,7 @@
 {
 
     if ([key isEqualToString: @"id"]) {
-        self.photoId = (NSInteger) value;
+        self.photoId = [value integerValue];
     } else if ([key isEqualToString: @"thumbUrl"] || [key isEqualToString: @"photoUrl"] || [key isEqualToString: @"webUrl"] )
     {
         NSURL *url = [NSURL URLWithString:(NSString*) value];
@@ -36,12 +36,14 @@
         self.updated = [dateFormatter dateFromString:(NSString*) value];
         
     } else if([key isEqualToString: @"width"]){
-        self.width = (NSInteger) value;
+        self.width = [value integerValue];
     } else if ([key isEqualToString: @"height"]){
-        self.height = (NSInteger) value;
+        self.height = [value integerValue];
     } else if([key isEqualToString: @"title"]){
+
         self.title = (NSString*) value;
     } else if ([key isEqualToString: @"caption"]){
+
         self.caption = (NSString*) value;
     } else if([key isEqualToString: @"latitude"] || [key isEqualToString: @"longitude"]){
          CLLocationDegrees degree = [ value doubleValue];
@@ -51,9 +53,10 @@
             self.coordinate = CLLocationCoordinate2DMake(self.coordinate.latitude,degree);
         }
     } else if([key isEqualToString: @"totalLikes"]){
-        self.totalLikes = (NSInteger) value;
+
+        self.totalLikes = [value integerValue];
     } else if ([key isEqualToString: @"totalComments"]){
-        self.totalComments = (NSInteger) value;
+        self.totalComments = [value integerValue];
     } else if([key isEqualToString: @"comments"]){
         NSMutableArray *commentArray = [NSMutableArray array];
         for (NSDictionary *commentDictionary  in [(NSDictionary*)value objectForKey:@"items"]) {

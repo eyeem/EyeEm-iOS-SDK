@@ -15,7 +15,7 @@
 {
     
     if ([key isEqualToString: @"id"]) {
-        self.userId = (NSInteger) value;
+        self.userId = [value integerValue];
     } else if ([key isEqualToString: @"thumbUrl" ]|| [key isEqualToString: @"photoUrl"])
     {
         NSURL *url = [NSURL URLWithString:(NSString*) value];
@@ -27,15 +27,15 @@
     } else if([key isEqualToString: @"description"]){
         self.description = (NSString*) value;
     } else if ([key isEqualToString: @"totalPhotos"]){
-        self.totalPhotos = (NSInteger) value;
+        self.totalPhotos = [value integerValue];
     } else if ([key isEqualToString: @"totalFollowers"]){
-        self.totalFollowers = (NSInteger) value;
+        self.totalFollowers = [value integerValue];
     }else if ([key isEqualToString: @"totalFriends"]){
-        self.totalFriends = (NSInteger) value;
+        self.totalFriends = [value integerValue];
     }else if ([key isEqualToString: @"totalLikedAlbums"]){
-        self.totalLikedAlbums = (NSInteger) value;
+        self.totalLikedAlbums = [value integerValue];
     }else if ([key isEqualToString: @"totalPhotos"]){
-        self.totalPhotos = (NSInteger) value;
+        self.totalPhotos = [value integerValue];
     }
 }
 

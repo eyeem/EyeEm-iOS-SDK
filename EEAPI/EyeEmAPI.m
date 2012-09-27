@@ -181,12 +181,55 @@
     [newParameters removeObjectForKey:@"endpoint"];
     [self requestWithEndpoint:endpoint parameters:newParameters httpMethod:@"GET" completion:^(NSHTTPURLResponse *httpResponse, NSDictionary *response, NSError *error)
     {
+
         NSDictionary *newResponse = [self sortResponse:[NSMutableDictionary dictionaryWithDictionary:response]];
         completionBlock(httpResponse,newResponse, error);
     } ];
     
 }
 
+
+- (void) putRequestWithParameters: (NSDictionary*) parameters
+                       completion: (void(^)(NSHTTPURLResponse *httpResponse, NSDictionary*, NSError* ))completionBlock
+{
+    NSMutableDictionary *newParameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
+    NSString *endpoint = (NSString*)[parameters valueForKey:@"endpoint"];
+    [newParameters removeObjectForKey:@"endpoint"];
+    [self requestWithEndpoint:endpoint parameters:newParameters httpMethod:@"PUT" completion:^(NSHTTPURLResponse *httpResponse, NSDictionary *response, NSError *error)
+     {
+         completionBlock(httpResponse,response, error);
+     } ];
+    
+    
+}
+
+
+- (void) postRequestWithParameters: (NSDictionary*) parameters
+                       completion: (void(^)(NSHTTPURLResponse *httpResponse, NSDictionary*, NSError* ))completionBlock
+{
+    NSMutableDictionary *newParameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
+
+    NSString *endpoint = (NSString*)[parameters valueForKey:@"endpoint"];
+#ifdef DEBUG
+    if ([endpoint hasSuffix:@"/friends"] && [parameters objectForKey:@"friend_id"] == nil) {
+        NSAssert(NO, @"The parameter friend_id is required!");
+    } else if([endpoint hasSuffix:@"/comments"] && [parameters objectForKey:@"message"] == nil )
+    {
+        NSAssert(NO, @"The parameter message is required!");
+    } else if([endpoint hasSuffix:@"/news"] && [parameters objectForKey:@"markAsRead"] == nil )
+    {
+        NSAssert(NO, @"The parameter markAsRead is required!");
+    }
+#endif
+
+    [newParameters removeObjectForKey:@"endpoint"];
+    [self requestWithEndpoint:endpoint parameters:newParameters httpMethod:@"POST" completion:^(NSHTTPURLResponse *httpResponse, NSDictionary *response, NSError *error)
+     {
+         completionBlock(httpResponse,response, error);
+     } ];
+    
+    
+}
 - (NSDictionary* ) sortResponse: (NSMutableDictionary*) response
 {
     NSMutableDictionary *dict = (__bridge NSMutableDictionary *)CFPropertyListCreateDeepCopy(kCFAllocatorDefault, (__bridge CFDictionaryRef)response, kCFPropertyListMutableContainers);
@@ -241,7 +284,16 @@
             [[dict objectForKey:key ] setObject:userArray forKey:@"items"];
 
         } else if ([key isEqualToString:@"user"]) {
-            EEUser *user = [[EEUser alloc] init];
+            EEUser *user = nil;
+            NSArray *keys = [response allKeys ];
+            if ([keys containsObject:@"newsSettings"] || [keys containsObject:@"email"] || [keys containsObject:@"emailNotifications"] || [keys containsObject:@"pushNotifications"] || [keys containsObject:@"services"] )
+            {
+                user = [[EEOAuthUser alloc] init];
+
+            } else {
+                user = [[EEUser alloc] init];
+
+            }
             
             for (NSString *innerKey in [[response objectForKey:key] keyEnumerator]) {
                 
@@ -284,13 +336,41 @@
             
             
         } else if ([key isEqualToString:@"comments"]) {
+            NSMutableArray *commentArray = [NSMutableArray array];
+            for (NSDictionary *commentDictionary  in [[response objectForKey:key ] objectForKey:@"items"]) {
+                EEComment *comment = [[EEComment alloc] init];
+                
+                for (NSString *innerKey in [commentDictionary keyEnumerator]) {
+                    
+                    [comment setValue:[commentDictionary valueForKey:innerKey] forParameter:innerKey];
+                }
+                
+                
+                [commentArray addObject:comment];
+            }
+            [[dict objectForKey:key ] setObject:commentArray forKey:@"items"];
             
         } else if ([key isEqualToString:@"comment"]) {
-                        
-        } else if ([key isEqualToString:@"bgImages"]) {
             
+            EEComment *comment = [[EEComment alloc] init];
+            
+            for (NSString *innerKey in [[response objectForKey:key] keyEnumerator]) {
+                
+                [comment setValue:[[response objectForKey:key] valueForKey:innerKey] forParameter:innerKey];
+            }
+            
+            
+            
+            
+            [dict setObject:comment forKey:@"comment"];
+
+            
+        } else if ([key isEqualToString:@"bgImages"]) {
+            [dict setObject:[response objectForKey:key ] forKey:key];
+
         } else if ([key isEqualToString:@"topics"]) {
-                        
+            [dict setObject:[response objectForKey:key ] forKey:key];
+   
         } else {
             [dict setObject:[response objectForKey:key ] forKey:key];
 
@@ -315,7 +395,7 @@
         return nil;
     }
     NSString *newUrl = [self extractString:[urlPath absoluteString]];
-    newUrl = [NSString stringWithFormat:@"%@/%i/%i/%@", kURL, (int)(imageSize.width), (int)(imageSize.height), newUrl];
+    newUrl = [NSString stringWithFormat:@"%@/%i/%i/%@", kURL, (NSInteger) roundf(imageSize.width), (NSInteger) roundf(imageSize.height), newUrl];
     
     
     return [NSURL URLWithString:newUrl];
@@ -328,7 +408,7 @@
         return nil;
     }
     NSString *newUrl = [self extractString: [urlPath absoluteString]];
-    newUrl = [NSString stringWithFormat:@"%@/w/%i/%@", kURL, (int)(imageWidth), newUrl];
+    newUrl = [NSString stringWithFormat:@"%@/w/%i/%@", kURL, (imageWidth), newUrl];
     
     
     return [NSURL URLWithString:newUrl];
@@ -339,7 +419,7 @@
         return nil;
     }
     NSString *newUrl = [self extractString:[urlPath absoluteString]];
-    newUrl = [NSString stringWithFormat:@"%@/sq/%i/%@", kURL, (int)(imageSize), newUrl];
+    newUrl = [NSString stringWithFormat:@"%@/sq/%i/%@", kURL, (imageSize), newUrl];
     
     
     return [NSURL URLWithString:newUrl];
@@ -352,7 +432,7 @@
         return nil;
     }
     NSString *newUrl = [self extractString:[urlPath absoluteString]];
-    newUrl = [NSString stringWithFormat:@"%@/h/%i/%@", kURL, (int)(imageHeight), newUrl];
+    newUrl = [NSString stringWithFormat:@"%@/h/%i/%@", kURL, (imageHeight), newUrl];
     
     
     return [NSURL URLWithString:newUrl];

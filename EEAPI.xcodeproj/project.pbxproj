@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		922F59E216072DDF0088F2CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922F59E116072DDF0088F2CA /* Foundation.framework */; };
 		922F59E716072DDF0088F2CA /* EyeEmAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 922F59E616072DDF0088F2CA /* EyeEmAPI.h */; };
-		922F59E916072DDF0088F2CA /* EyeEM-iOS-SDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 922F59E816072DDF0088F2CA /* EyeEM-iOS-SDK.m */; };
 		922F59F416073DD40088F2CA /* EERequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 922F59F316073DD40088F2CA /* EERequest.m */; };
+		926004001611D385009B96CA /* EyeEmAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 926003FF1611D385009B96CA /* EyeEmAPI.m */; };
 		9263F291160B1C250018A4DB /* EEQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 9263F290160B1C250018A4DB /* EEQuery.m */; };
 		9263F29D160B28A10018A4DB /* EENews.m in Sources */ = {isa = PBXBuildFile; fileRef = 9263F29C160B28A10018A4DB /* EENews.m */; };
 		929194191608D8F100625402 /* EEPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 929194181608D8F100625402 /* EEPhoto.m */; };
@@ -20,6 +20,13 @@
 		9291942A1609C5B600625402 /* EELocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 929194291609C5B600625402 /* EELocation.m */; };
 		9291942C1609C71E00625402 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9291942B1609C71E00625402 /* CoreLocation.framework */; };
 		92919448160A157600625402 /* EEOAuthUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 92919447160A157500625402 /* EEOAuthUser.m */; };
+		92DD4B911612178900B350A4 /* EEAlbumsQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD4B901612178900B350A4 /* EEAlbumsQuery.m */; };
+		92DD4B941612179600B350A4 /* EEUsersQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD4B931612179600B350A4 /* EEUsersQuery.m */; };
+		92DD4B97161217A800B350A4 /* EEPhotosQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD4B96161217A800B350A4 /* EEPhotosQuery.m */; };
+		92DD4B9A161217BB00B350A4 /* EENewsQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD4B99161217BB00B350A4 /* EENewsQuery.m */; };
+		92DD4B9D16121B1300B350A4 /* EETopicsQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD4B9C16121B1300B350A4 /* EETopicsQuery.m */; };
+		92DD4BA016121B4000B350A4 /* EESearchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD4B9F16121B4000B350A4 /* EESearchQuery.m */; };
+		92DD4BA316121B5300B350A4 /* EEVenuesQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DD4BA216121B5300B350A4 /* EEVenuesQuery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,9 +47,9 @@
 		922F59E116072DDF0088F2CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		922F59E516072DDF0088F2CA /* EEAPI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EEAPI-Prefix.pch"; sourceTree = "<group>"; };
 		922F59E616072DDF0088F2CA /* EyeEmAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EyeEmAPI.h; sourceTree = "<group>"; };
-		922F59E816072DDF0088F2CA /* EyeEM-iOS-SDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "EyeEM-iOS-SDK.m"; path = "../EyeEM-iOS-SDK.m"; sourceTree = "<group>"; };
 		922F59F216073DD40088F2CA /* EERequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EERequest.h; sourceTree = "<group>"; };
 		922F59F316073DD40088F2CA /* EERequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EERequest.m; sourceTree = "<group>"; };
+		926003FF1611D385009B96CA /* EyeEmAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EyeEmAPI.m; sourceTree = "<group>"; };
 		9263F28F160B1C250018A4DB /* EEQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEQuery.h; sourceTree = "<group>"; };
 		9263F290160B1C250018A4DB /* EEQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEQuery.m; sourceTree = "<group>"; };
 		9263F29B160B28A10018A4DB /* EENews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EENews.h; sourceTree = "<group>"; };
@@ -60,6 +67,20 @@
 		9291942B1609C71E00625402 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		92919446160A157400625402 /* EEOAuthUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEOAuthUser.h; sourceTree = "<group>"; };
 		92919447160A157500625402 /* EEOAuthUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEOAuthUser.m; sourceTree = "<group>"; };
+		92DD4B8F1612178900B350A4 /* EEAlbumsQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEAlbumsQuery.h; sourceTree = "<group>"; };
+		92DD4B901612178900B350A4 /* EEAlbumsQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEAlbumsQuery.m; sourceTree = "<group>"; };
+		92DD4B921612179600B350A4 /* EEUsersQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEUsersQuery.h; sourceTree = "<group>"; };
+		92DD4B931612179600B350A4 /* EEUsersQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEUsersQuery.m; sourceTree = "<group>"; };
+		92DD4B95161217A800B350A4 /* EEPhotosQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEPhotosQuery.h; sourceTree = "<group>"; };
+		92DD4B96161217A800B350A4 /* EEPhotosQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEPhotosQuery.m; sourceTree = "<group>"; };
+		92DD4B98161217BB00B350A4 /* EENewsQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EENewsQuery.h; sourceTree = "<group>"; };
+		92DD4B99161217BB00B350A4 /* EENewsQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EENewsQuery.m; sourceTree = "<group>"; };
+		92DD4B9B16121B1300B350A4 /* EETopicsQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EETopicsQuery.h; sourceTree = "<group>"; };
+		92DD4B9C16121B1300B350A4 /* EETopicsQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EETopicsQuery.m; sourceTree = "<group>"; };
+		92DD4B9E16121B4000B350A4 /* EESearchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EESearchQuery.h; sourceTree = "<group>"; };
+		92DD4B9F16121B4000B350A4 /* EESearchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EESearchQuery.m; sourceTree = "<group>"; };
+		92DD4BA116121B5300B350A4 /* EEVenuesQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEVenuesQuery.h; sourceTree = "<group>"; };
+		92DD4BA216121B5300B350A4 /* EEVenuesQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEVenuesQuery.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,13 +125,12 @@
 		922F59E316072DDF0088F2CA /* EEAPI */ = {
 			isa = PBXGroup;
 			children = (
+				92DD4B881612135C00B350A4 /* Query */,
 				9291941B1608D90100625402 /* Models */,
 				922F59E616072DDF0088F2CA /* EyeEmAPI.h */,
-				922F59E816072DDF0088F2CA /* EyeEM-iOS-SDK.m */,
+				926003FF1611D385009B96CA /* EyeEmAPI.m */,
 				922F59F216073DD40088F2CA /* EERequest.h */,
 				922F59F316073DD40088F2CA /* EERequest.m */,
-				9263F28F160B1C250018A4DB /* EEQuery.h */,
-				9263F290160B1C250018A4DB /* EEQuery.m */,
 				922F59E416072DDF0088F2CA /* Supporting Files */,
 			);
 			path = EEAPI;
@@ -143,6 +163,29 @@
 				9263F29C160B28A10018A4DB /* EENews.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		92DD4B881612135C00B350A4 /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				9263F28F160B1C250018A4DB /* EEQuery.h */,
+				9263F290160B1C250018A4DB /* EEQuery.m */,
+				92DD4B8F1612178900B350A4 /* EEAlbumsQuery.h */,
+				92DD4B901612178900B350A4 /* EEAlbumsQuery.m */,
+				92DD4B921612179600B350A4 /* EEUsersQuery.h */,
+				92DD4B931612179600B350A4 /* EEUsersQuery.m */,
+				92DD4B95161217A800B350A4 /* EEPhotosQuery.h */,
+				92DD4B96161217A800B350A4 /* EEPhotosQuery.m */,
+				92DD4B98161217BB00B350A4 /* EENewsQuery.h */,
+				92DD4B99161217BB00B350A4 /* EENewsQuery.m */,
+				92DD4B9B16121B1300B350A4 /* EETopicsQuery.h */,
+				92DD4B9C16121B1300B350A4 /* EETopicsQuery.m */,
+				92DD4B9E16121B4000B350A4 /* EESearchQuery.h */,
+				92DD4B9F16121B4000B350A4 /* EESearchQuery.m */,
+				92DD4BA116121B5300B350A4 /* EEVenuesQuery.h */,
+				92DD4BA216121B5300B350A4 /* EEVenuesQuery.m */,
+			);
+			name = Query;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +239,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922F59E916072DDF0088F2CA /* EyeEM-iOS-SDK.m in Sources */,
 				922F59F416073DD40088F2CA /* EERequest.m in Sources */,
 				929194191608D8F100625402 /* EEPhoto.m in Sources */,
 				9291941E1608D92900625402 /* EEUser.m in Sources */,
@@ -206,6 +248,14 @@
 				92919448160A157600625402 /* EEOAuthUser.m in Sources */,
 				9263F291160B1C250018A4DB /* EEQuery.m in Sources */,
 				9263F29D160B28A10018A4DB /* EENews.m in Sources */,
+				926004001611D385009B96CA /* EyeEmAPI.m in Sources */,
+				92DD4B911612178900B350A4 /* EEAlbumsQuery.m in Sources */,
+				92DD4B941612179600B350A4 /* EEUsersQuery.m in Sources */,
+				92DD4B97161217A800B350A4 /* EEPhotosQuery.m in Sources */,
+				92DD4B9A161217BB00B350A4 /* EENewsQuery.m in Sources */,
+				92DD4B9D16121B1300B350A4 /* EETopicsQuery.m in Sources */,
+				92DD4BA016121B4000B350A4 /* EESearchQuery.m in Sources */,
+				92DD4BA316121B5300B350A4 /* EEVenuesQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

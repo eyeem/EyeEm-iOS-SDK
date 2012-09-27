@@ -7,11 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import <UIKit/UIKit.h>
 #import "EERequest.h"
 #import "EEPhoto.h"
 #import "EEUser.h"
 #import "EEAlbum.h"
 #import "EEQuery.h"
+#import "EEPhotosQuery.h"
+#import "EEAlbumsQuery.h"
+#import "EENewsQuery.h"
+#import "EESearchQuery.h"
+#import "EETopicsQuery.h"
+#import "EEUsersQuery.h"
+#import "EEVenuesQuery.h"
+
+#import "EEComment.h"
+#import "EEOAuthUser.h"
 
 @protocol EESessionDelegate;
 @class EEAlbum,EEComment,EERequest,EEPhoto,EEUser,EEQuery;
@@ -48,6 +60,11 @@
 - (void) getRequestWithParameters: (NSDictionary*) parameters
                        completion: (void(^)(NSHTTPURLResponse *httpResponse, NSDictionary*, NSError* ))completionBlock;
 
+- (void) putRequestWithParameters: (NSDictionary*) parameters
+                       completion: (void(^)(NSHTTPURLResponse *httpResponse, NSDictionary*, NSError* ))completionBlock;
+
+- (void) postRequestWithParameters: (NSDictionary*) parameters
+                        completion: (void(^)(NSHTTPURLResponse *httpResponse, NSDictionary*, NSError* ))completionBlock;
 - (NSDictionary* ) sortResponse: (NSMutableDictionary*) response;
 - (NSString*) extractString: (NSString *) string;
 

@@ -17,9 +17,9 @@
 {
     
     if ([key isEqualToString: @"id"]) {
-        self.commentId = (NSInteger) value;
+        self.commentId = [value integerValue];
     } else if([key isEqualToString: @"photoId"]){
-        self.photoId = (NSInteger) value;
+        self.photoId = [value integerValue];
     }else if ([key isEqualToString: @"updated"])
     {
         

@@ -9,54 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-enum {
-    gUsers,
-    gPhotos,
-    gAlbums,
-    gNews,
-    gTopics,
-    gSearch,
-    gVenues
-};
-typedef NSInteger EEGeneralEndpoint;
 
-enum {
 
-    sPhotos,
-    sLikedPhotos,
-    sFriendsPhotos,
-    sLikedAlbums,
-    sFeed,
-    sDiscover,
-    sFriends,
-    sFollowers,
-    sTopics,
-    sSocialMedia,
-    sNewsSettings,
-    sShare,
-    sHide,
-    sLikers,
-    sComments,
-    sAlbums,
-    sFlags,
-    sBgImages,
-    sRecommended,
-    sContributors,
-    sView,
-    sFoursqareToken,
-    sNothing
-    
-};
-typedef NSInteger EESpecificEndpoint;
 
 @interface EEQuery : NSObject
 
 
-@property (nonatomic, assign) EEGeneralEndpoint generalEndpoint;
 @property (nonatomic, assign) NSInteger firstId;
-@property (nonatomic, assign) EESpecificEndpoint specificEndpoint; // e.g. likers, comments, albums...
+@property (nonatomic, assign) NSString *generalEndpointString;
 @property (nonatomic, assign) NSInteger secondId;
-
+@property (nonatomic, assign) NSString *specificEndpointString;
 @property (nonatomic, strong) NSString *firstStringId;
 @property (nonatomic, strong) NSString *secondStringId;
 
@@ -69,52 +31,21 @@ typedef NSInteger EESpecificEndpoint;
 @property (nonatomic, assign) BOOL onlyId;
 @property (nonatomic, assign) BOOL detailed;
 @property (nonatomic, assign) BOOL albums;
+@property (nonatomic, strong) NSString *message;
+@property (nonatomic, strong) NSString *services;
+
+@property (nonatomic, strong) NSString *name;
 
 
-#pragma mark Albums
-@property (nonatomic, assign) BOOL trending;
-@property (nonatomic, strong) NSString *geoSearch;
-@property (nonatomic, strong) NSString *foursquareId;
-@property (nonatomic, assign) NSInteger minPhotos;
 
-@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
-@property (nonatomic, assign) double latitude;
-@property (nonatomic, assign) double longitude;
+#pragma mark Flags
 
-@property (nonatomic, assign) BOOL photos;
-@property (nonatomic, assign) NSInteger photoNumber;
+@property (nonatomic, assign) BOOL onlyIdFlag;
+@property (nonatomic, assign) BOOL detailedFlag;
+@property (nonatomic, assign) BOOL albumsFlag;
 
 
-@property (nonatomic, assign) BOOL photoDetails;
-@property (nonatomic, assign) BOOL contributors;
 
-
-#pragma mark Photos
-@property (nonatomic, assign) BOOL comments;
-@property (nonatomic, assign) BOOL likers;
-
-@property (nonatomic, assign) NSInteger commentNumber;
-@property (nonatomic, assign) NSInteger likerNumber;
-
-#pragma mark Users
-
-@property (nonatomic, assign) BOOL suggested;
-@property (nonatomic, strong) NSString *closestVenueFsIds;
-@property (nonatomic, strong) NSString *cityName;
-
-
-#pragma mark News
-@property (nonatomic, assign) BOOL aggregated;
-@property (nonatomic, assign) BOOL countUnseen;
-
-#pragma mark Search
-
-@property (nonatomic, assign) BOOL users;
-
-
-#pragma mark Topics
-
-@property (nonatomic, assign) NSString *autoComplete;
 
 
 -(NSDictionary*) createDictionary;
