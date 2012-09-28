@@ -4,7 +4,7 @@
 This is the first interation of our iOS wrapper. It uses ARC, so the development target is 5.0.
 Please read first our main [API documentation](https://github.com/eyeem/Public-API#eyeem-api).
 
-It's inpsired by the [Facebook iOS SDK](https://github.com/facebook/facebook-ios-sdk),[500px iOS SDK](https://github.com/500px/500px-iOS-api) and [crino](https://github.com/crino).
+It's inpsired by the [Facebook iOS SDK](https://github.com/facebook/facebook-ios-sdk), [500px iOS SDK](https://github.com/500px/500px-iOS-api) and [crino](https://github.com/crino).
 ## Getting Started
 ***
 
