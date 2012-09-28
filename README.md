@@ -51,7 +51,7 @@ query.secondId = 1013;
 
 ``` objective-c
 
-EEQAlbumsuery *query = [[EEAlbumsQuery alloc] init];
+EEAlbumsQuery *query = [[EEAlbumsQuery alloc] init];
 query.firstId = 17;
 query.detailed = YES;
 query.photos = YES;
