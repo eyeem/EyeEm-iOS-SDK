@@ -181,9 +181,3 @@ For feedback, questions, complaints and props, you can get in touch with us at [
 ***
 EyeEm iOS SDK is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
 
-
-<<<<<<< HEAD
-=======
-
-Thanks to the [Facebook](https://github.com/facebook/facebook-ios-sdk), [500px](https://github.com/500px/500px-iOS-api) and [crino](https://github.com/crino).
->>>>>>> added License
