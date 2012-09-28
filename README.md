@@ -19,7 +19,7 @@ If you want to use OAuth authentication you have to implement the API in your Ap
 
 1. You need to add this to your info.plist file. The two schemes differ, that one is the normal client_id and the other one is a lowercase client_id.
 
-[XCode screenshot](http://f.cl.ly/items/1H081u1y0Z1W171l1f2R/Bildschirmfoto%202012-09-26%20um%2020.05.51.png)
+![XCode screenshot](http://f.cl.ly/items/1H081u1y0Z1W171l1f2R/Bildschirmfoto%202012-09-26%20um%2020.05.51.png)
 
 2. Add this to your AppDelegate.m file
 	
