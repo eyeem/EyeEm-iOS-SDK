@@ -11,13 +11,16 @@ It's inpsired by the [Facebook iOS SDK](https://github.com/facebook/facebook-ios
 1. Register your app at [EyeEm](http://www.eyeem.com/developers)
 2. put `#import "EyeEmAPI.h"`in your .h
 3. To initialize the API use `[[EyeEmAPI alloc] initWithClientId:client_id]`
-4. Link your project with CoreLocation.framework, if you havn't already.
+4. Link your project with CoreLocation.framework, if you haven't already.
 
 ###with OAuth 
 
-If you want to use OAuth authentication you have to implement the API (step 2 and 3) in your AppDelegate. 
+If you want to use OAuth authentication you have to implement the API in your AppDelegate. Also you need to do the following steps:
 
-1. You need to add this to your info.plist file. ee`client_id`://
+1. You need to add this to your info.plist file. The two schemes differ, that one is the normal client_id and the other one is a lowercase client_id.
+
+	BILD
+
 2. Add this to your AppDelegate.m file
 	
 ``` objective-c
@@ -39,18 +42,16 @@ You create a EEQuery object and then set the properties the way you want to have
 `https://www.eyeem.com/api/v2/users/me/friends/1013`
 
 ``` objective-c
-EEQuery *query = [[EEQuery alloc] init];
-query.generalEndpoint = gUsers;
+EEUsersQuery *query = [[EEUsersQuery alloc] init];
 query.firstStringId =@"me";
-query.specificEndpoint = sFriends;
+query.specificEndpoint = EEspecificUsersEndpointFriends;
 query.secondId = 1013;
 ```
 `https://www.eyeem.com/api/v2/albums/17?detailed=1&includePhotos=1&numPhotos=2&photoDetails=1&includeContributors=1&includeLikers=1`
 
 ``` objective-c
 
-EEQuery *query = [[EEQuery alloc] init];
-query.generalEndpoint = gAlbums;
+EEQAlbumsuery *query = [[EEAlbumsQuery alloc] init];
 query.firstId = 17;
 query.detailed = YES;
 query.photos = YES;
@@ -63,7 +64,7 @@ query.likers = YES;
 
 ###Request
 
-Now are only GET requests supported.
+GET, PUT and POST requests supported. Ask us for write access.
 To get the query object into a dictionary use the `- (NSDictionary*) createDictionary;` 
 
 ```objective-c
@@ -71,10 +72,20 @@ To get the query object into a dictionary use the `- (NSDictionary*) createDicti
                        completion: (void(^)(NSHTTPURLResponse *httpResponse, NSDictionary*, NSError* ))completionBlock;
                        
 ```
+```objective-c
+- (void) putRequestWithParameters: (NSDictionary*) parameters
+                       completion: (void(^)(NSHTTPURLResponse *httpResponse, NSDictionary*, NSError* ))completionBlock;
+                       
+```
+```objective-c
+- (void) postRequestWithParameters: (NSDictionary*) parameters
+                       completion: (void(^)(NSHTTPURLResponse *httpResponse, NSDictionary*, NSError* ))completionBlock;
+                       
+```
 
 ###Response
 
-The response is basically the same as in the API documentation descriped, only that a photo dictionary is a EEPhoto object and an arry of photos an array of EEphoto objects is. The same applies to albums and users. 
+The response is basically the same as in the API documentation described, only that a photo dictionary is a EEPhoto object and an arry of photos an array of EEPhoto objects is. The same applies to albums and users. 
 [`https://www.eyeem.com/api/v2/photos?type=popular&limit=5`](https://github.com/eyeem/Public-API/blob/master/endpoints/photos/GET_photo.md#files)
 ```
 {
@@ -145,11 +156,13 @@ The response is basically the same as in the API documentation descriped, only t
 ```
 ###Authorize
 
-To authorize a user call `[---your EyeEmAPI object--- authorize]`. You can implement EESessionDelegate to get notified, wheter the user accepted the authorization or not.
+To authorize a user call `[---your EyeEmAPI object--- authorize]`. You can implement EESessionDelegate to get notified, wheter the user accepted the authorization or not. The method which is called after the app opened again is `- (void) sessionValid:(BOOL)valid`.
+
+
 ## Image Resolution
 ***
 
-If you want get an other photo than the standard 640*480 pixel from the photoUrl, use these methods: 
+If you want get an other photosize than the standard 640*480 pixel from the photoUrl, use these methods: 
 
 ``` objective-c
 -(NSURL*) urlFromPathForPhoto:(NSURL*)urlPath withPixelSize:(CGSize)imageSize;
@@ -158,7 +171,6 @@ If you want get an other photo than the standard 640*480 pixel from the photoUrl
 -(NSURL*) urlFromPathForPhoto:(NSURL*)urlPath withPixelHeight:(NSInteger)imageHeight;
 ```
 
-  
 ##Contact
 ***
 
@@ -170,3 +182,8 @@ For feedback, questions, complaints and props, you can get in touch with us at [
 EyeEm iOS SDK is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
 
 
+<<<<<<< HEAD
+=======
+
+Thanks to the [Facebook](https://github.com/facebook/facebook-ios-sdk), [500px](https://github.com/500px/500px-iOS-api) and [crino](https://github.com/crino).
+>>>>>>> added License
