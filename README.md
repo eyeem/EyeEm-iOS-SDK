@@ -4,7 +4,7 @@
 This is the first interation of our iOS wrapper. It uses ARC, so the development target is 5.0.
 Please read first our main [API documentation](https://github.com/eyeem/Public-API#eyeem-api).
 
-
+It's inpsired by the [Facebook iOS SDK](https://github.com/facebook/facebook-ios-sdk),[500px iOS SDK](https://github.com/500px/500px-iOS-api) and [crino](https://github.com/crino).
 ## Getting Started
 ***
 
@@ -165,8 +165,8 @@ If you want get an other photo than the standard 640*480 pixel from the photoUrl
 For feedback, questions, complaints and props, you can get in touch with us at [api@eyeem.com](mailto:api@eyeem.com) or [@eyeemapi](http://twitter.com/eyeemapi) on Twitter.
 
 
-##Credits
+##License
 ***
+EyeEm iOS SDK is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
 
 
-Thanks to the [Facebook](https://github.com/facebook/facebook-ios-sdk),[500px](https://github.com/500px/500px-iOS-api) and [crino](https://github.com/crino).
