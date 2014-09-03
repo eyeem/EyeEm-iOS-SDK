@@ -395,7 +395,7 @@
         return nil;
     }
     NSString *newUrl = [self extractString:[urlPath absoluteString]];
-    newUrl = [NSString stringWithFormat:@"%@/%i/%i/%@", kURL, (NSInteger) roundf(imageSize.width), (NSInteger) roundf(imageSize.height), newUrl];
+    newUrl = [NSString stringWithFormat:@"%@/%li/%li/%@", kURL, (long)roundf(imageSize.width), (long)roundf(imageSize.height), newUrl];
     
     
     return [NSURL URLWithString:newUrl];
@@ -408,7 +408,7 @@
         return nil;
     }
     NSString *newUrl = [self extractString: [urlPath absoluteString]];
-    newUrl = [NSString stringWithFormat:@"%@/w/%i/%@", kURL, (imageWidth), newUrl];
+    newUrl = [NSString stringWithFormat:@"%@/w/%li/%@", kURL, (long)(imageWidth), newUrl];
     
     
     return [NSURL URLWithString:newUrl];
@@ -419,7 +419,7 @@
         return nil;
     }
     NSString *newUrl = [self extractString:[urlPath absoluteString]];
-    newUrl = [NSString stringWithFormat:@"%@/sq/%i/%@", kURL, (imageSize), newUrl];
+    newUrl = [NSString stringWithFormat:@"%@/sq/%li/%@", kURL, (long)(imageSize), newUrl];
     
     
     return [NSURL URLWithString:newUrl];
@@ -432,7 +432,7 @@
         return nil;
     }
     NSString *newUrl = [self extractString:[urlPath absoluteString]];
-    newUrl = [NSString stringWithFormat:@"%@/h/%i/%@", kURL, (imageHeight), newUrl];
+    newUrl = [NSString stringWithFormat:@"%@/h/%li/%@", kURL, (long)(imageHeight), newUrl];
     
     
     return [NSURL URLWithString:newUrl];

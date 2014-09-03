@@ -7,14 +7,10 @@
 //
 
 #import "EEQuery.h"
-enum {
+typedef NS_ENUM(NSUInteger, EESpecificVenuesEndpoint) {
     EEspecificVenuesEndpointFoursqareToken,
     EEspecificVenuesEndpointNothing
-    
-    
-    
 };
-typedef NSInteger EESpecificVenuesEndpoint;
 
 @interface EEVenuesQuery : EEQuery
 @property (nonatomic, assign) EESpecificVenuesEndpoint specificEndpoint;

@@ -42,7 +42,7 @@
         NSAssert(NO, @"The parameters service, venueId, name and location are required!");
 #endif
     }
-    NSMutableDictionary *dictionary = [NSDictionary dictionaryWithDictionary:[super createDictionary]];
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary:[super createDictionary]];
     
     if (self.service !=nil) {
         [dictionary setValue:self.service forKey:@"service"];

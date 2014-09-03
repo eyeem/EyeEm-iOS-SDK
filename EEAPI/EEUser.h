@@ -14,7 +14,7 @@
 @property (nonatomic, copy) NSString *fullname;
 @property (nonatomic, copy) NSString *nickname;
 @property (nonatomic, strong) NSURL *thumbUrl;
-@property (nonatomic, copy) NSString *description;
+@property (nonatomic, copy) NSString *desc;
 @property (nonatomic, strong) NSURL *photoUrl;
 @property (nonatomic, assign) NSInteger totalPhotos;
 @property (nonatomic, assign) NSInteger totalFollowers;

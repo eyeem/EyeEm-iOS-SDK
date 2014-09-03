@@ -23,7 +23,7 @@
 {
     self.generalEndpointString = @"/news";
 
-    NSMutableDictionary *dictionary = [NSDictionary dictionaryWithDictionary:[super createDictionary]];
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary:[super createDictionary]];
     if (self.aggregatedFlag ) {
         
         [dictionary setValue:[NSNumber numberWithBool:self.aggregated] forKey:@"aggregated"];

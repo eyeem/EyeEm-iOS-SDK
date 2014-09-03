@@ -7,7 +7,7 @@
 //
 
 #import "EEQuery.h"
-enum {
+typedef NS_ENUM(NSUInteger, EESpecificPhotosEndpoint) {
     EEspecificPhotosEndpointDiscover,
     EEspecificPhotosEndpointTopics,
     EEspecificPhotosEndpointShare,
@@ -17,14 +17,9 @@ enum {
     EEspecificPhotosEndpointAlbums,
     EEspecificPhotosEndpointFlags,
     EEspecificPhotosEndpointBgImages,
-
-
     EEspecificPhotosEndpointNothing
-    
-    
-    
 };
-typedef NSInteger EESpecificPhotosEndpoint;
+
 @interface EEPhotosQuery : EEQuery
 @property (nonatomic, assign) EESpecificPhotosEndpoint specificEndpoint;
 @property (nonatomic, assign) BOOL comments;
