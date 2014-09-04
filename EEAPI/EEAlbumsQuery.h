@@ -7,7 +7,7 @@
 //
 
 #import "EEQuery.h"
-enum {
+typedef NS_ENUM(NSUInteger, EESpecificAlbumsEndpoint) {
     EEspecificAlbumsEndpointPhotos,
 
     EEspecificAlbumsEndpointShare,
@@ -19,11 +19,7 @@ enum {
     EEspecificAlbumsEndpointView,
 
     EEspecificAlbumsEndpointNothing
-
-    
-    
 };
-typedef NSInteger EESpecificAlbumsEndpoint;
 
 @interface EEAlbumsQuery : EEQuery
 

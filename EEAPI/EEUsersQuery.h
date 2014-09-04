@@ -7,7 +7,7 @@
 //
 
 #import "EEQuery.h"
-enum {
+typedef NS_ENUM(NSUInteger, EESpecificUsersEndpoint) {
     EEspecificUsersEndpointPhotos,
     EEspecificUsersEndpointLikedPhotos,
     EEspecificUsersEndpointFriendsPhotos,
@@ -22,11 +22,7 @@ enum {
     EEspecificUsersEndpointShare,
     EEspecificUsersEndpointHide,
     EEspecificUsersEndpointNothing
-    
-    
-    
 };
-typedef NSInteger EESpecificUsersEndpoint;
 
 @interface EEUsersQuery : EEQuery
 @property (nonatomic, assign) EESpecificUsersEndpoint specificEndpoint;
@@ -43,7 +39,7 @@ typedef NSInteger EESpecificUsersEndpoint;
 @property (nonatomic, strong) NSString *nickname;
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *password;
-@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) NSString *desc;
 @property (nonatomic, assign) BOOL emailNotification;
 @property (nonatomic, assign) BOOL pushNotification;
 @property (nonatomic, assign) BOOL facebookTimeline;

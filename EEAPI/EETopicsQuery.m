@@ -29,7 +29,7 @@
     }
 #endif
 
-    NSMutableDictionary *dictionary = [NSDictionary dictionaryWithDictionary:[super createDictionary]];
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary:[super createDictionary]];
     
     if (self.autoComplete !=nil) {
         [dictionary setValue:self.autoComplete forKey:@"autoComplete"];

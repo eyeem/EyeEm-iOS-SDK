@@ -77,7 +77,7 @@
         NSAssert(NO, @"One of the following parameters is required: ids, q, suggested!");
     }
 #endif
-    NSMutableDictionary *dictionary = [NSDictionary dictionaryWithDictionary:[super createDictionary]];
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary:[super createDictionary]];
     
     
     if (self.suggestedFlag ) {
@@ -124,8 +124,8 @@
     if (self.password !=nil) {
         [dictionary setValue:self.password forKey:@"password"];
     }
-    if (self.description !=nil) {
-        [dictionary setValue:self.description forKey:@"description"];
+    if (self.desc !=nil) {
+        [dictionary setValue:self.desc forKey:@"description"];
     }
     if (self.emailNotificationFlag) {
         [dictionary setValue:[NSNumber numberWithBool:self.emailNotification] forKey:@"emailNotification"];

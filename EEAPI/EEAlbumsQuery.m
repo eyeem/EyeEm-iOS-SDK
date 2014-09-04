@@ -72,7 +72,8 @@
         NSAssert(NO, @"One of the following parameters is required: ids, q,  trending, geoSearch!");
     }
 #endif
-    NSMutableDictionary *dictionary = [NSDictionary dictionaryWithDictionary:[super createDictionary]];
+
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary:[super createDictionary]];
     
     if (self.trendingFlag) {
         

@@ -28,7 +28,7 @@
         NSAssert(NO, @"The parameter q is required!");
     }
 #endif
-    NSMutableDictionary *dictionary = [NSDictionary dictionaryWithDictionary:[super createDictionary]];
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary:[super createDictionary]];
     if (self.usersFlag) {
         [dictionary setValue:[NSNumber numberWithBool:self.users] forKey:@"users"];
     }

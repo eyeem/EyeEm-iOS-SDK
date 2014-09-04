@@ -36,7 +36,7 @@
             [endpoint appendFormat:@"/%@",self.firstStringId];
 
         } else {
-            [endpoint appendFormat:@"/%i",self.firstId];
+            [endpoint appendFormat:@"/%li",(long)self.firstId];
 
         }
     }
@@ -47,7 +47,7 @@
                 [endpoint appendFormat:@"/%@",self.secondStringId];
                 
             } else {
-                [endpoint appendFormat:@"/%i",self.secondId];
+                [endpoint appendFormat:@"/%li",(long)self.secondId];
                 
             }
         }

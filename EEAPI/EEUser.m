@@ -25,7 +25,7 @@
             self.photoUrl = url;
         } 
     } else if([key isEqualToString: @"description"]){
-        self.description = (NSString*) value;
+        self.desc = (NSString*) value;
     } else if ([key isEqualToString: @"totalPhotos"]){
         self.totalPhotos = [value integerValue];
     } else if ([key isEqualToString: @"totalFollowers"]){

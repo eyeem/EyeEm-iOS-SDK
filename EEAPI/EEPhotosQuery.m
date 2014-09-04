@@ -82,7 +82,7 @@
         NSAssert(NO, @"One of the following parameters is required:type, ids!");
     }
 #endif
-    NSMutableDictionary *dictionary = [NSDictionary dictionaryWithDictionary:[super createDictionary]];
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary:[super createDictionary]];
     
     
     if (self.commentsFlag) {
