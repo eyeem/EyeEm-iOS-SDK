@@ -1,19 +1,19 @@
 # EyeEm iOS SDK
 ***
 
-This is the first interation of our iOS wrapper. It uses ARC, so the development target is 5.0.
+This is the first iteration of our iOS wrapper. It uses ARC, so the minimum deployment target is 5.0.
 Please read first our main [API documentation](https://github.com/eyeem/Public-API#eyeem-api).
 
-It's inpsired by the [Facebook iOS SDK](https://github.com/facebook/facebook-ios-sdk), [500px iOS SDK](https://github.com/500px/500px-iOS-api) and [crino](https://github.com/crino).
+It's inspired by the [Facebook iOS SDK](https://github.com/facebook/facebook-ios-sdk), [500px iOS SDK](https://github.com/500px/500px-iOS-api) and [crino](https://github.com/crino).
 ## Getting Started
 ***
 
 1. Register your app at [EyeEm](http://www.eyeem.com/developers)
-2. put `#import "EyeEmAPI.h"`in your .h
+2. Add `#import "EyeEmAPI.h"`in your .h
 3. To initialize the API use `[[EyeEmAPI alloc] initWithClientId:client_id]`
 4. Link your project with CoreLocation.framework, if you haven't already.
 
-###with OAuth 
+###OAuth Authentication
 
 If you want to use OAuth authentication you have to implement the API in your AppDelegate. Also you need to do the following steps:
 
@@ -156,7 +156,7 @@ The response is basically the same as in the API documentation described, only t
 ```
 ###Authorize
 
-To authorize a user call `[---your EyeEmAPI object--- authorize]`. You can implement EESessionDelegate to get notified, wheter the user accepted the authorization or not. The method which is called after the app opened again is `- (void) sessionValid:(BOOL)valid`.
+To authorize a user call `[---your EyeEmAPI object--- authorize]`. You can implement EESessionDelegate to get notified, whether the user accepted the authorization or not. The method which is called after the app opened again is `- (void) sessionValid:(BOOL)valid`.
 
 
 ## Image Resolution
