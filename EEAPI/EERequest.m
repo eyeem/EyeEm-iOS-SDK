@@ -27,6 +27,7 @@ static const NSTimeInterval kTimeoutInterval = 60.0;
     
     return self;
 }
+
 - (void) start
 {
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:self.url
@@ -35,12 +36,7 @@ static const NSTimeInterval kTimeoutInterval = 60.0;
     [request setValue:kUserAgent forHTTPHeaderField:@"User-Agent"];
     self.data = [NSMutableData data];
     self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
-
-    
 }
-
-
-
 
 
 #pragma mark - NSURLConnectionDelegate
@@ -56,30 +52,30 @@ static const NSTimeInterval kTimeoutInterval = 60.0;
     [self.data appendData:data];
 }
 
-
-
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSError *jsonError = nil;
     if (self.data != nil) {
         NSDictionary *response = [NSJSONSerialization JSONObjectWithData:self.data options:kNilOptions error:&jsonError];
-        self.completionBlock(self.httpResponse,response,nil);
+        if (self.completionBlock) {
+            self.completionBlock(self.httpResponse,response,nil);
+        }
 
     } else {
-        self.completionBlock(self.httpResponse,nil,nil);
+        if (self.completionBlock) {
+            self.completionBlock(self.httpResponse,nil,nil);
+        }
 
     }
-    
-    
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     
     self.data = nil;
     self.connection = nil;
-    self.completionBlock(nil,nil,error);
-    
+
+    if (self.completionBlock) {
+        self.completionBlock(nil,nil,error);
+    }
 }
 
-
 @end
-
