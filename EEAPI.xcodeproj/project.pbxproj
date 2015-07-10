@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40C4AFA61B24E071003B6C88 /* EERequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 922F59F216073DD40088F2CA /* EERequest.h */; };
+		40C4AFA71B24E11F003B6C88 /* EEAlbumsQuery.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DD4B8F1612178900B350A4 /* EEAlbumsQuery.h */; };
+		40C4AFA81B24E11F003B6C88 /* EEUsersQuery.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DD4B921612179600B350A4 /* EEUsersQuery.h */; };
+		40C4AFA91B24E11F003B6C88 /* EEPhotosQuery.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DD4B95161217A800B350A4 /* EEPhotosQuery.h */; };
+		40C4AFAA1B24E11F003B6C88 /* EENewsQuery.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DD4B98161217BB00B350A4 /* EENewsQuery.h */; };
+		40C4AFAB1B24E11F003B6C88 /* EETopicsQuery.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DD4B9B16121B1300B350A4 /* EETopicsQuery.h */; };
+		40C4AFAC1B24E11F003B6C88 /* EESearchQuery.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DD4B9E16121B4000B350A4 /* EESearchQuery.h */; };
+		40C4AFAD1B24E11F003B6C88 /* EEVenuesQuery.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92DD4BA116121B5300B350A4 /* EEVenuesQuery.h */; };
+		40C4AFAE1B24E11F003B6C88 /* EEComment.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 929194221609B9C300625402 /* EEComment.h */; };
+		40C4AFAF1B24E11F003B6C88 /* EEAlbum.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9291941F1608D94300625402 /* EEAlbum.h */; };
+		40C4AFB01B24E11F003B6C88 /* EEUser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9291941C1608D92900625402 /* EEUser.h */; };
+		40C4AFB11B24E11F003B6C88 /* EEOAuthUser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92919446160A157400625402 /* EEOAuthUser.h */; };
+		40C4AFB21B24E11F003B6C88 /* EELocation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 929194281609C5B600625402 /* EELocation.h */; };
+		40C4AFB31B24E11F003B6C88 /* EEPhoto.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 929194171608D8F100625402 /* EEPhoto.h */; };
+		40C4AFB41B24E11F003B6C88 /* EENews.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9263F29B160B28A10018A4DB /* EENews.h */; };
+		40C4AFB51B24E127003B6C88 /* EEQuery.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9263F28F160B1C250018A4DB /* EEQuery.h */; };
 		922F59E216072DDF0088F2CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922F59E116072DDF0088F2CA /* Foundation.framework */; };
 		922F59E716072DDF0088F2CA /* EyeEmAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 922F59E616072DDF0088F2CA /* EyeEmAPI.h */; };
 		922F59F416073DD40088F2CA /* EERequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 922F59F316073DD40088F2CA /* EERequest.m */; };
@@ -36,6 +52,22 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				40C4AFB51B24E127003B6C88 /* EEQuery.h in CopyFiles */,
+				40C4AFA71B24E11F003B6C88 /* EEAlbumsQuery.h in CopyFiles */,
+				40C4AFA81B24E11F003B6C88 /* EEUsersQuery.h in CopyFiles */,
+				40C4AFA91B24E11F003B6C88 /* EEPhotosQuery.h in CopyFiles */,
+				40C4AFAA1B24E11F003B6C88 /* EENewsQuery.h in CopyFiles */,
+				40C4AFAB1B24E11F003B6C88 /* EETopicsQuery.h in CopyFiles */,
+				40C4AFAC1B24E11F003B6C88 /* EESearchQuery.h in CopyFiles */,
+				40C4AFAD1B24E11F003B6C88 /* EEVenuesQuery.h in CopyFiles */,
+				40C4AFAE1B24E11F003B6C88 /* EEComment.h in CopyFiles */,
+				40C4AFAF1B24E11F003B6C88 /* EEAlbum.h in CopyFiles */,
+				40C4AFB01B24E11F003B6C88 /* EEUser.h in CopyFiles */,
+				40C4AFB11B24E11F003B6C88 /* EEOAuthUser.h in CopyFiles */,
+				40C4AFB21B24E11F003B6C88 /* EELocation.h in CopyFiles */,
+				40C4AFB31B24E11F003B6C88 /* EEPhoto.h in CopyFiles */,
+				40C4AFB41B24E11F003B6C88 /* EENews.h in CopyFiles */,
+				40C4AFA61B24E071003B6C88 /* EERequest.h in CopyFiles */,
 				922F59E716072DDF0088F2CA /* EyeEmAPI.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +246,7 @@
 		922F59D516072DDF0088F2CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = EyeEm;
 			};
 			buildConfigurationList = 922F59D816072DDF0088F2CA /* Build configuration list for PBXProject "EEAPI" */;
@@ -279,6 +311,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -292,9 +325,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -314,6 +348,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -321,9 +356,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
